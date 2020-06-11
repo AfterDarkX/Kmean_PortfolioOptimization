@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="TIS-620">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="con_header">
+            <h3>ระบบวางแผนการลงทุนด้วยการเรียนรู้ของเครื่อง</h3>
+        </div>
+        <div class="radio_container">
+            <!-- <img src="./static/risk.jpg"> -->
+            <div class="radioGroup mb-4">
+                <h1 style="font-weight: 100;">
+                    ทำแบบประเมินความเสี่ยง
+                </h1>
+                <button type="button mb-5" onclick="toForm()" class="btn btn-warning btn-width mr-0 mb-0">
+                    ทำแบบประเมิณความเสี่ยง
+                </button>
+            </div>
+            <div id="show-text-low" style="display: none;" class="alert alert-success" role="alert">
+                <h4 style="font-weight: bold;">ความเสี่ยงระดับต่ำ</h4>
+            </div>
+            <div id="show-text-mid" style="display: none;" class="alert alert-warning" role="alert">
+                <h4 style="font-weight: bold;">ความเสี่ยงระดับปานกลาง</h4>
+            </div>
+            <div id="show-text-high" style="display: none;" class="alert alert-danger" role="alert">
+                <h4 style="font-weight: bold;">ความเสี่ยงระดับสูง</h4>
+            </div>
+
+            <div id="radio_group">
+                <h1 style="font-weight: 100;">
+                    หรือ ท่านสามารถเลือกความเสี่ยงที่ตัวเองยอมรับได้
+                </h1>
+                <input type="radio" id="low-rad" name="rad" value="low" onclick="lowInput()">
+                <label for="low">ความเสี่ยงต่ำ</label><br>
+                <input type="radio" id="mid-rad" name="rad" value="mid" onclick="midInput()">
+                <label for="mid">ความเสี่ยงปานกลาง</label><br>
+                <input type="radio" id="high-rad" name="rad" value="high" onclick="highInput()">
+                <label for="high">ความเสี่ยงสูง</label>
+            </div>
+
+
+
+        </div>
+        <div class="input_container">
+            <!-- <button style="margin-bottom: 2%;" type="button" class="btn btn-warning" style="margin-bottom: 2%">ทำแบบประเมิณความเสียง</button> -->
+            <div>
+                <form>
+                    <!-- <label for="fname">อัตราผลตอบแทน :</label>
+                    <input style="margin-left: 5%;" type="text" id="fname" name="fname"><span style="margin-left: 5px;">%</span>
+                    <br><br> -->
+                    <label for="lname">จำนวนเงินที่ต้องการลงทุน :</label>
+                    <input type="text" id="invest" name="invest"><span style="margin-left: 5px;"> บาท </span>
+                    <br><br>
+                    <button type="button" onclick="toDashboard()" class="btn btn-success"
+                        style="margin-bottom: 2%">คำนวณแผนการลงทุน</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let locate = window.location.search;
+    let getPageVal = new URLSearchParams(locate);
+    let riskAcp = "";
+    let radgroup = document.getElementById("radio_group");
+    var radios = document.getElementsByName('rad');
+
+    console.log(locate)
+
+    if (locate != "") {
+        riskAcp = getPageVal.get("risk_acp")
+        radgroup.style.display = 'none';
+
+        if (riskAcp == "low") {
+            document.getElementById("show-text-low").style.display = "block";
+        }
+        else if (riskAcp == "mid") {
+            document.getElementById("show-text-mid").style.display = "block";
+        } else if (riskAcp == "high") {
+            document.getElementById("show-text-high").style.display = "block";
+        }
+    } else {
+        // if (radios[0].checked) {
+        //     riskAcp = radios[0].value;
+        // }
+        // if (radios[1].checked) {
+        //     riskAcp = radios[1].value;
+        // }
+        // if (radios[2].checked) {
+        //     riskAcp = radios[2].value;
+        // }
+    }
+
+
+    function lowInput() {
+        document.getElementById("low-rad").checked = true;
+        console.log(document.getElementById("low-rad").value);
+        riskAcp = document.getElementById("low-rad").value;
+    }
+    function midInput() {
+        document.getElementById("mid-rad").checked = true;
+        console.log(document.getElementById("mid-rad").value);
+        riskAcp = document.getElementById("mid-rad").value;
+    }
+    function highInput() {
+        document.getElementById("high-rad").checked = true;
+        console.log(document.getElementById("high-rad").value);
+        riskAcp = document.getElementById("high-rad").value;
+    }
+
+
+    function toForm() {
+        window.location = "form2.html?"
+
+    }
+
+    function toDashboard() {
+        let invest = document.getElementById("invest").value;
+        window.location = "dashboard.html?risk_acp=" + riskAcp + "&invest=" + invest;
+    }
+
+
+</script>
+
+</html>

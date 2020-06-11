@@ -1,0 +1,18 @@
+FundNameEng,FundCode,FundCode_2nd,Asset_Class,AIMC_Category,AIMC_Name,asset_code,A,B,C,D,E,F
+Krung Thai Short Term Fund,KT-ST,,ST_BOND,ST_BOND,Short Term Government Bond,TBG1TOTR_Index,0.1,0.1,0.05,,,
+K Fixed Income,K-FIXED,,MT_BOND,MT_BOND,Mid Term General Bond,TBG1TOTR_Index,0.15,0.1,0.1,0.05,0.05,
+ONE Fixed Income Dividend,ONE-DI,,MT_BOND,MT_BOND,Mid Term General Bond,TBG1TOTR_Index,0.15,0.1,,,,
+TMB Aggregate Bond,TMBABF,,MT_BOND,MT_BOND,Mid Term General Bond,TBG1TOTR_Index,0.1,0.05,,,,
+K Asia Pacific Bond,K-APB,,G_BOND,G_BOND,Emerging Market Bond Discreationary F/X Hedge or Unhedge,TBG1TOTR_Index,,0.1,0.1,0.1,,
+LH Thai Property,LHTPROP,,REIT_TH,REIT_TH,Fund of Property Fund - Thai,SETPREIT_Index,0.1,0.1,0.1,0.1,0.1,0.1
+CIMB-Principal Property Income-A,PRINCIPAL iPROP-A,PRINCIPAL iPROP,REIT_TH,REIT_TH_EN,Fund of Property fund -Thai and Foreign,SETPREIT_Index,0.1,0.1,0.1,0.1,0.05,
+TMB Property Income Plus,TMBPIPF,,REIT_TH,REIT_TH_EN,Fund of Property fund -Thai and Foreign,SETPREIT_Index,0.05,0.05,0.05,,,
+ONE Equity (Corporate 14) RA,ONE-EC14-RA,ONE-EC14,EQ_TH,EQ_TH_G,Equity General,SET TRI,0.1,0.1,0.15,0.15,0.15,0.15
+K Valued Stock,K-VALUE,,EQ_TH,EQ_TH_G,Equity General,SET TRI,0.1,0.1,0.1,0.1,0.15,0.15
+K Mid Small Cap Equity,K-MIDSMALL,,EQ_TH,EQ_TH_SM,Equity Small - Mid Cap,sSET TRI,,0.05,0.1,0.1,0.1,0.15
+ONE Ultimate Global Growth,ONE-UGG,,EQ_DL,EQ_DL_G,Global Equity,,,,0.1,0.1,0.1,0.1
+LH Global Equity A,LHGEQ,LHGEQ,EQ_DL,EQ_DL_G,Global Equity,M1WO_Index,,,,0.05,0.1,0.1
+SCB Global Equity(Acc),SCBGEQFUND,SCBGEQFUND,EQ_DL,EQ_DL_G,Global Equity,,,,,,,0.05
+K Asian Smaller Companies Equity,K-ASIA,,EQ_EM,EQ_EM_APEJ,Asia Pacific Ex Japan,,,,,0.1,0.1,0.1
+KTAM All Asia Pacific Equity-A,KT-AASIA,KT-AASIA,EQ_EM,EQ_EM_APEJ,Asia Pacific Ex Japan,,,,,,0.1,0.1
+K Gold,K-GOLD,,GOLD,EQ_EM_CPM,Commodities Precious Metals,,0.05,0.05,0.05,0.05,,
